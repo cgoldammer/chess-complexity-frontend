@@ -1,0 +1,8 @@
+.gameTable {
+  overflow: scroll;
+  max-height: 400px;
+}
+
+.center {
+  margin: auto;
+}
