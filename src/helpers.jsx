@@ -12,10 +12,12 @@ export const gameStatus = {
   draw: [4, 'Draw', 'warning'],
 };
 
+const pieceLetters = 'pnbrqk';
+
 export const invertLetters = fen => {
   const tempLetter = 'T';
   var fenInvert = fen;
-  for (var letter of 'pnrqk'){
+  for (var letter of pieceLetters){
     const upper = letter.toUpperCase();
     fenInvert = fenInvert.replace(new RegExp(letter, 'g'), tempLetter);
     fenInvert = fenInvert.replace(new RegExp(upper, 'g'), letter);
@@ -42,7 +44,10 @@ export const invertFen = fen => {
   const positionPartInvert = fenSplit.reverse().join('/');
   const castlePartInvert = invertLetters(castlePart);
 
-  return positionPartInvert + ' w ' + castlePartInvert + ' ' + parts.slice(3).join(' ');
+  const full = positionPartInvert + ' w ' + castlePartInvert + ' ' + parts.slice(3).join(' ');
+
+  console.log(full);
+  return full;
 };
 
 export const fillFen = fen => {
