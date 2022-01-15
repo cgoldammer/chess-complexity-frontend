@@ -13,4 +13,4 @@ SERVEDIR=~/serve_content/chess-complexity-frontend
 cd $CURRENTDIR
 rm -rf $SERVEDIR
 mkdir $SERVEDIR
-cp -r $CURRENTDIR/lib $SERVEDIR/
+cp -r $CURRENTDIR/lib/. $SERVEDIR/

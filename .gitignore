@@ -5,3 +5,8 @@ data/template.json
 lib/bundle.js
 .travis*
 package-lock.json
+__mocks__
+lib/model.json
+lib/bundle.min.js
+lib/bundle.js
+lib/stockfish.js
